@@ -35,35 +35,32 @@
    <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
-   <string>Вход</string>
+   <string>Регистрация</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../files/app_images/вход.png</normaloff>../files/app_images/вход.png</iconset>
+    <normaloff>../files/app_images/регистрация.png</normaloff>../files/app_images/регистрация.png</iconset>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
-                background-color: rgb(228, 249, 255);
-                }
-                QPushButton {
-                background-color: rgb(51, 177, 255);
-                border-radius: 20px;
-                font: 10pt &quot;Arial&quot;;
-                color: rgb(255, 255, 255);
-                }
-                QPushButton:hover {
-                border-radius: 24px;
-                background-color: rgb(52, 202, 232);
-                }
-                QPushButton:pressed {
-                border-radius: 28px;
-                background-color: rgb(0, 222, 0);
-                }
-QStatusBar {
-	text-align: center;
+	background-color: rgb(228, 249, 255);
+}
+QPushButton {
+	background-color: rgb(51, 177, 255);
+	border-radius: 20px;
+	font: 10pt &quot;Arial&quot;;
+	color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+	border-radius: 24px;
+	background-color: rgb(52, 202, 232);
+}
+QPushButton:pressed {
+	border-radius: 28px;
+	background-color: rgb(0, 222, 0);
 }
 QLineEdit {
 	border-radius: 15px;
@@ -73,19 +70,22 @@ QLineEdit:hover {
 	border-radius: 20px;
 	font: 75 12pt &quot;Arial&quot;;
 	background-color: rgb(250, 250, 250);
+}
+QComboBox {
+	border-radius: 15px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">self.setStyleSheet(&quot;background-color: blue&quot;)</string>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>110</y>
-      <width>300</width>
-      <height>40</height>
+      <x>0</x>
+      <y>220</y>
+      <width>600</width>
+      <height>55</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -97,7 +97,7 @@ QLineEdit:hover {
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>25</pointsize>
+      <pointsize>17</pointsize>
       <weight>75</weight>
       <italic>false</italic>
       <bold>true</bold>
@@ -110,7 +110,7 @@ QLineEdit:hover {
      <bool>false</bool>
     </property>
     <property name="text">
-     <string>Логин</string>
+     <string>Подтвердите пароль</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -120,15 +120,59 @@ QLineEdit:hover {
     </property>
     <property name="margin">
      <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>270</y>
+      <width>300</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>170</y>
+      <width>300</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>125</x>
-      <y>155</y>
-      <width>350</width>
-      <height>49</height>
+      <x>150</x>
+      <y>70</y>
+      <width>300</width>
+      <height>45</height>
      </rect>
     </property>
     <property name="font">
@@ -140,22 +184,45 @@ QLineEdit:hover {
       <bold>false</bold>
      </font>
     </property>
-    <property name="whatsThis">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
-                        font-size:14pt; font-weight:600;&quot;&gt;Введите логин&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                    </string>
-    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>600</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Придумайте логин</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>230</y>
-      <width>300</width>
-      <height>40</height>
+      <x>0</x>
+      <y>115</y>
+      <width>600</width>
+      <height>55</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -167,7 +234,7 @@ QLineEdit:hover {
     <property name="font">
      <font>
       <family>Arial</family>
-      <pointsize>25</pointsize>
+      <pointsize>17</pointsize>
       <weight>75</weight>
       <italic>false</italic>
       <bold>true</bold>
@@ -180,7 +247,7 @@ QLineEdit:hover {
      <bool>false</bool>
     </property>
     <property name="text">
-     <string>Пароль</string>
+     <string>Придумайте пароль</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -190,64 +257,6 @@ QLineEdit:hover {
     </property>
     <property name="margin">
      <number>0</number>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>125</x>
-      <y>275</y>
-      <width>350</width>
-      <height>49</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="tabletTracking">
-     <bool>false</bool>
-    </property>
-    <property name="whatsThis">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
-                        font-size:12pt; font-weight:600;&quot;&gt;Введите пароль&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                    </string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>165</x>
-      <y>345</y>
-      <width>270</width>
-      <height>65</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>Вход</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -257,7 +266,7 @@ QLineEdit:hover {
     <property name="geometry">
      <rect>
       <x>165</x>
-      <y>430</y>
+      <y>420</y>
       <width>270</width>
       <height>65</height>
      </rect>
@@ -278,13 +287,78 @@ QLineEdit:hover {
      <string>Регистрация</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>310</y>
+      <width>600</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Введите имя:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>360</y>
+      <width>300</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>515</x>
-      <y>275</y>
+      <x>510</x>
+      <y>215</y>
       <width>50</width>
-      <height>49</height>
+      <height>50</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -536,9 +610,8 @@ QLineEdit:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QStatusBar#statusBar {
-                    color: red;
-                    font: bold;}
-                </string>
+color: red;
+font: bold;}</string>
    </property>
   </widget>
  </widget>
